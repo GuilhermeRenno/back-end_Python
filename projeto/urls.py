@@ -24,8 +24,12 @@ def my_view(request):
 def user_view(request, username):
     return HttpResponse(f"Perfil do Usuário:{username}")
 
+def root_view(request):
+    return HttpResponse("Estamos na raiz: Porta 8000")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sobre/', my_view),
     path('user/<str:username>/',user_view)
+    path('8000/',root_view)
 ]
