@@ -30,6 +30,6 @@ def root_view(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('sobre/', my_view),
-    path('user/<str:username>/',user_view)
+    path('user/<str:username>/',user_view),
     path('8000/',root_view)
-]
+                ]
