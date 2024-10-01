@@ -25,3 +25,11 @@ def root_view(request):
 
 def home(request):
     return render(request,'home.html')
+
+def contexto(request):
+    context={
+        'nome':'joão',
+        'idade':30,
+        'hobbies':['Leitura','Ciclismo','Cozinhar']
+    }
+    return render(request, 'contexto.html', context)
